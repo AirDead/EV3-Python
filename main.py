@@ -1,14 +1,8 @@
-#!/usr/bin/env python3
-from ev3dev2.sensor.lego import ColorSensor
-from time import sleep
+from color_logger import ColorLogger
 
-color_sensor = ColorSensor()
-
-print("Color:", color_sensor.color)
-print("Reflected light intensity:", color_sensor.reflected_light_intensity)
-print("RGB:", color_sensor.rgb)
-
-color_sensor.mode = ColorSensor.MODE_RGB_RAW
-
-rgb_values_raw = color_sensor.raw
-print("RGB values (RAW):", rgb_values_raw)
+if __name__ == "__main__":
+    logger = ColorLogger()
+    logger.load_all_cogs('cogs')  # Загрузка всех когов из папки 'cogs'
+    
+    while True:
+        logger.check_color()
