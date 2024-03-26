@@ -1,4 +1,4 @@
-from ev3_controller import EV3Controller
+from Core.Core import EV3Controller
 
 if __name__ == "__main__":
     motor_ports = ['A', 'B']
