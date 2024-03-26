@@ -1,4 +1,4 @@
-from color_logger import ColorLogger
+from lib import ColorLogger
 
 if __name__ == "__main__":
     logger = ColorLogger()
